@@ -1,0 +1,20 @@
+{
+  "name": "exploring_node_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code_01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node code_01.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashikuzzaman-Roby/Exploring_node_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashikuzzaman-Roby/Exploring_node_js/issues"
+  },
+  "homepage": "https://github.com/Ashikuzzaman-Roby/Exploring_node_js#readme"
+}
