@@ -28,7 +28,7 @@ const myServer = http.createServer((req, res) => {
                 break;
             default:
                 // 404 রেসপন্স
-                // res.statusCode = 404; // HTTP 404 স্ট্যাটাস কোড সেট করা হলো
+                res.statusCode = 404; // HTTP 404 স্ট্যাটাস কোড সেট করা হলো
                 res.end("404 : Not Found");
         }
     });
