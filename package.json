@@ -5,7 +5,7 @@
   "main": "code_01.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node code_01.js"
+    "start": "node url_handling.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ashikuzzaman-Roby/Exploring_node_js/issues"
   },
-  "homepage": "https://github.com/Ashikuzzaman-Roby/Exploring_node_js#readme"
+  "homepage": "https://github.com/Ashikuzzaman-Roby/Exploring_node_js#readme",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
 }
