@@ -1,14 +1,13 @@
 const http = require("http");
 const fs = require("fs"); // File System module
 
-// একটি কনস্ট্যান্ট ডিফাইন করা হলো, যাতে HomePage এরর না হয়
-// const HomePage =
-
 const myServer = http.createServer((req, res) => {
     // 1. লগ ডেটা তৈরি করা হলো
     const log = `${new Date().toLocaleString()} : ${req.url}\n`; // '\n' যোগ করা হলো নতুন লাইনের জন্য
     console.log(`New request received : ${log}`);
+
     // 2. ডেটা log.txt ফাইলে লেখা হলো (asynchronously)
+    
     fs.appendFile("log.txt", log, (err, data) => {
         if (err) {
             console.error("Error writing to log file:", err);
