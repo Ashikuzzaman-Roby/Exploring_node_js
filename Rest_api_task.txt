@@ -1,0 +1,9 @@
+making a rest api : 
+
+GET/users --> get all the users 
+GET/users/1 --> Get the users with id 1 
+GET/users/2 --> Get the users with id 2 
+now i want to make a hybrid server that is 
+
+if GET/users ---> return a html page 
+if GET/api/users --> reutrn the json data.
