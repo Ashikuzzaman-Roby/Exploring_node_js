@@ -1,5 +1,6 @@
 const express = require("express");
 const users = require("./MOCK_DATA.json");
+const fs = require("fs");
 const PORT = 8000;
 
 const app= express();
@@ -16,6 +17,8 @@ app.get("/about", (req,res)=>{
 app.get("/api/users", (req,res)=>{
     return res.json(users);
 });
+
+
 
 app.get("/users" , (req,res)=>{
     let  html = `
@@ -64,7 +67,7 @@ app.get("/user/id" , (req, res)=>{
         </head>
         <style> 
                 body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
-                ol {  padding: 0,margin-left:30px; }
+                ol {  padding: 0; margin-left:30px; }
                 li { background: #fff; margin-bottom: 8px; padding: 10px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
                 h1 { color: #333; }
                  
@@ -91,6 +94,19 @@ app.get("/user/id" , (req, res)=>{
     res.send(html);
 })
 
+
+
+app.get("/api/users/:id",(req,res)=>{
+    const id = Number(req.params.id);
+    const user = users.find((user)=>{
+          return Number(user.id) ===id
+    });
+    if(!user){
+        return res.status(404).json({ error: "User not found" });
+
+    }
+    return res.json(user)
+});
 
 
 app.listen(PORT, ()=>{console.log(`Server is started ...`)});
